@@ -1,17 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>|
-      <router-link to="/cart">CART</router-link>|
-      <router-link to="/delivery">DELIVERY</router-link>|
-      <router-link to="/order">ORDER</router-link>
+    <div class="container">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <router-link class="nav-link" to="/">ANASAYFA</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/about">NOTLAR</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/cart">SEPETİM</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/delivery">TESLİMAT</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/order">ÖDEME</router-link>
+        </li>
+      </ul>
     </div>
     <router-view/>
   </div>
 </template>
 
-<style>
+<style scoped>
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,4 +33,5 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+.nav {margin-bottom: 30px; border-bottom: solid 1px #ddd; padding-bottom: 20px;}
 </style>

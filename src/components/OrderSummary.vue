@@ -1,11 +1,29 @@
 <template>
   <div class="hello">
-    <h1>Sipariş Özeti</h1>
-    Kargo: {{summaryItems.CargoAmount}} <br />
-    İndirim Tutarı: {{summaryItems.DiscountAmount}} <br />
-    Kupon İndirimi: {{summaryItems.CouponDiscountAmount}} <br />
-    Genel Toplam: {{summaryItems.GeneralTotalAmount}} <br />
-    Toplam Tutar: {{summaryItems.TotalAmount}} <br />
+    <h3>Sipariş Özeti</h3>
+    <hr>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+         Kargo: 
+        <span class="badge badge-primary badge-pill">{{summaryItems.CargoAmount}}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+         İndirim Tutarı: 
+        <span class="badge badge-primary badge-pill">{{summaryItems.DiscountAmount}}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+         Kupon İndirimi: 
+        <span class="badge badge-primary badge-pill">{{summaryItems.CouponDiscountAmount}}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+         Genel Toplam: 
+        <span class="badge badge-primary badge-pill">{{summaryItems.GeneralTotalAmount}}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+         Toplam Tutar: 
+        <span class="badge badge-primary badge-pill">{{summaryItems.TotalAmount}}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -16,8 +34,8 @@ export default {
     summaryItem: Object
   },
   computed: {
-    summaryItems(){
-      return this.summaryItem || {}
+    summaryItems() {
+      return this.summaryItem || {};
     }
   }
 };

@@ -1,9 +1,11 @@
 <template>
   <div class="cart">
-    <h1>Cart Page</h1>
+    
     <div class="container">
       <div class="row">
         <div class="col-8">
+          <h3>Sepetim</h3>
+          <hr>
           <ProductItem :products="products"/>
         </div>
         <div class="col-4">
@@ -27,9 +29,9 @@ export default {
   computed: {
     //store.state.products değiştiğinde, hesaplanan özelliğin yeniden değerlendirilmesi ve ilişkili DOM güncellemelerinin tetiklenmesine neden olur.
     //map Getters olmadan kullanımı.
-    // products () {
-    //   return this.$store.state.products
-    // }
+    //  products () {
+    //    return this.$store.state.products
+    //  },
     ...mapGetters(["products", "getSummary"])
   },
   methods: {
